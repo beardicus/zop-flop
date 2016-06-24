@@ -1,0 +1,5 @@
+apps:
+    - script: ingest.js
+    - script: digest.js
+    - script: delay.js
+    - script: update.js

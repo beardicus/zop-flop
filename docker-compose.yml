@@ -1,0 +1,19 @@
+redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+        - "6379:6379"
+    volumes:
+        - /home/bert/data/redis:/data
+    restart: always
+
+rethinkdb:
+    container_name: rethinkdb
+    image: rethinkdb:latest
+    ports:
+        - "8080:8080"
+        - "28015:28015"
+        - "29015:29015"
+    volumes:
+        - /home/bert/data/rethinkdb:/data
+    restart: always
