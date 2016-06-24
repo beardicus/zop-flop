@@ -1,6 +1,7 @@
 redis:
     container_name: redis
     image: redis:latest
+    command: redis-server --appendonly yes
     ports:
         - "6379:6379"
     volumes:
