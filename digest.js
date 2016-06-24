@@ -29,7 +29,7 @@ function gobble() {
     redis.zadd(
       'grub:delayset',
       moment(tweet.created_at, 'ddd MMM DD HH:mm:ss Z YYYY')
-        .add(1, 'minute')
+        .add(12, 'hour')
         .unix(),
       tweet.id_str
     );
