@@ -3,7 +3,7 @@ redis:
     image: redis:latest
     command: redis-server --appendonly yes
     ports:
-        - "6379:6379"
+        - "127.0.0.1:6379:6379"
     volumes:
         - /home/bert/data/redis:/data
     restart: always
@@ -12,9 +12,9 @@ rethinkdb:
     container_name: rethinkdb
     image: rethinkdb:latest
     ports:
-        - "8080:8080"
-        - "28015:28015"
-        - "29015:29015"
+        - "127.0.0.1:8080:8080"
+        - "127.0.0.1:28015:28015"
+        - "127.0.0.1:29015:29015"
     volumes:
         - /home/bert/data/rethinkdb:/data
     restart: always
